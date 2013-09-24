@@ -161,6 +161,7 @@ public class ZestBasicRunner implements ZestRunner, ZestRuntime {
 			// Set up the 'standard' variables
 			this.setStandardVariables(lastRequest);
 			this.setStandardVariables(lastResponse);
+
 			handleResponse(this.lastRequest, this.lastResponse);
 			return this.lastResponse;
 

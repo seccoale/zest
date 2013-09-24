@@ -77,27 +77,13 @@ public class ZestExpressionOr extends ZestStructuredExpression {
 	 */
 	@Override
 	public String toString() {
-		if (this.getChildrenCondition().isEmpty()) {
+		if(this.getChildrenCondition()==null || this.getChildrenCondition().isEmpty()){
 			return "Empty OR";
-		} else {
-			String expression = (isInverse() ? "NOT ( " : "( ");
-			for (int i = 0; i < this.getChildrenCondition().size() - 1; i++) {
-				expression += " " + this.getChild(i).toString() + " ) OR ( ";
-			}
-			expression += this.getChild(this.getChildrenCondition().size() - 1)
-					.toString() + " )";
-			return expression;
 		}
-	}
-
-	public static boolean isLiteralInstance(String literal) {
-		return getPattern().matcher(literal).matches();
-	}
-
-	public static Pattern getPattern() {
-		if (pattern == null) {
-			pattern=Pattern.compile("(((NOT\\s)?.*(OR.*)+)|(Empty\\sOR))");
+		String expression = (isInverse() ? "NOT (" : "(");
+		for (int i = 0; i < this.getChildrenCondition().size() - 1; i++) {
+			expression += " " + this.getChild(i).toString() + " OR";
 		}
-		return pattern;
+		return expression;
 	}
 }
