@@ -36,7 +36,9 @@ public class ZestUtils {
 	public final static String END_VARIABLE_REGEX = "\\}\\}";
 
 	/**
-	 * @param args
+	 * gets the forms in a response
+	 * @param response the response
+	 * @return a list of forms
 	 */
 	public static List<String> getForms(ZestResponse response) {
 		List<String> list = new ArrayList<String>();

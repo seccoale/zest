@@ -46,9 +46,10 @@ public class ZestActionInvoke extends ZestAction {
 	}
 
 	/**
-	 * Instantiates a new zest action invoke.
-	 *
-	 * @param message the message
+	 * invoke an action
+	 * @param script the script
+	 * @param variableName the variable name
+	 * @param parameters the parameters
 	 */
 	public ZestActionInvoke(String script, String variableName, List<String[]> parameters) {
 		super();

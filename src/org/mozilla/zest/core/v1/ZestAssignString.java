@@ -27,11 +27,9 @@ public class ZestAssignString extends ZestAssignment {
 	}
 
 	/**
-	 * Instantiates a new zest assign random integer.
-	 *
-	 * @param variableName the variable name
-	 * @param minInt the min int
-	 * @param maxInt the max int
+	 * Instantiates a new ZestAssignString
+	 * @param variableName the name of the variable
+	 * @param string the string replacement
 	 */
 	public ZestAssignString(String variableName, String string) {
 		super(variableName);

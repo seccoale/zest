@@ -30,9 +30,8 @@ public class ZestActionSleep extends ZestAction {
 	}
 
 	/**
-	 * Instantiates a new zest action print.
-	 *
-	 * @param message the message
+	 * Sleeps for milliseconds
+	 * @param milliseconds the milliseconds of sleep
 	 */
 	public ZestActionSleep(long milliseconds) {
 		super();
